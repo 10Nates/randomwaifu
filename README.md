@@ -9,4 +9,4 @@ Link SVG -> https://raw.githack.com/10Nates/randomwaifu/main/waifu.svg
 
 Heroku Site (No issues with Cross site scripting!) -> https://waifuimage.herokuapp.com/
 
-![https://waifuimage.herokuapp.com/]
+!(https://waifuimage.herokuapp.com/)
