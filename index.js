@@ -1,8 +1,9 @@
 const http = require('http')
 const https = require('https');
+const qs = require('querystring')
 
-function newImageURL(callback) {
-    https.get('https://api.waifu.pics/sfw/waifu', (response) => {
+function newImageURL(n, callback) {
+    https.get(`https://api.waifu.pics/${n ? 'n' : ''}sfw/waifu`, (response) => {
         res = '';
         response.on('data', (chunk) => { res += chunk })
 
@@ -13,23 +14,12 @@ function newImageURL(callback) {
     })
 }
 
-function newImageData(callback) {
-    newImageURL(url => {
-        https.get(url, (response) => {
-            var res
-            response.pipe(res)
-
-            response.on('end', () => {
-                callback([url, res])
-            })
-        })
-    })
-}
-
-
 var server = http.createServer(function (req, reso) {
 
-    newImageURL(url => {
+    var adult = qs.parse(req.url.replace('/?', '')).nsfw
+    var n = (adult === 'iam18plus' ? true : false)
+
+    newImageURL(n, url => {
         https.get(url, (response) => {
             var typef = url.split(/\./g)
             typef = typef[typef.length - 1]
