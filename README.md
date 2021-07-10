@@ -1,4 +1,4 @@
 # randomwaifu
 Shitpost, not a weeb. Will redirect to random waifu image.
 
-Link -> https://cdn.jsdelivr.net/gh/10Nates/randomwaifu/index.html
+Link -> https://raw.githack.com/10Nates/randomwaifu/main/index.html
