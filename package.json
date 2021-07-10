@@ -1,0 +1,11 @@
+{
+  "name": "randomwaifu",
+  "version": "1.0.0",
+  "description": "provides an image of a random waifu",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Nathan Hedge",
+  "license": "ISC"
+}
