@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%">
-    <script>function load(){fetch('https://api.waifu.pics/sfw/waifu').then(res=>{res.blob().then(b=>{b.text().then(t=>{document.getElementById('waifu').href=JSON.parse(t).url})})})}</script>
-    <image id="waifu" alt="waifu" style="height:inherit; width:inherit;" href=""/>
-    <script>
-        function load(){fetch('https://api.waifu.pics/sfw/waifu').then(res=>{res.blob().then(b=>{b.text().then(t=>{document.getElementById('waifu').setAttribute('href', JSON.parse(t).url)})})})}
-        load()
-    </script>
-    <noscript>Please enable javascript</noscript>
-</svg>
